@@ -4,7 +4,7 @@ const app = function () {
 
   const loadUsers = () => {
     return new Promise((resolve, reject) => {
-      const res = fetch(`https://randomuser.me/api/`, {mode: 'no-cors'});
+      const res = fetch(`https://randomuser.me/api/`, {method: 'GET', mode: 'no-cors', cache: 'no-cache'});
 
       if (res) {
         resolve(res);
@@ -66,7 +66,7 @@ const app = function () {
       users.push(loadUsers());
     }
   };
-  setUsersAmount(50);
+  setUsersAmount(12);
 
   Promise.all(users)
     .then(res => Promise.all(res.map(el => el.json())))
