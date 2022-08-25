@@ -64,7 +64,7 @@ const app = function () {
       users.push(loadUsers());
     }
   };
-  setUsersAmount(49);
+  setUsersAmount(51);
 
   Promise.all(users)
     .then(res => Promise.all(res.map(el => el.json())))
