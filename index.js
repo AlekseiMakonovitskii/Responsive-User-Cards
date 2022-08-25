@@ -4,7 +4,7 @@ const app = function () {
 
   const loadUsers = () => {
     return new Promise((resolve, reject) => {
-      const res = fetch(`https://randomuser.me/api/`, {method: 'GET', mode: 'no-cors', cache: 'no-cache'});
+      const res = fetch(`https://randomuser.me/api/`, {mode: 'no-cors'});
 
       if (res) {
         resolve(res);
