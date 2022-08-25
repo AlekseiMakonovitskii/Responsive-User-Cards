@@ -14,10 +14,8 @@ const app = function () {
     });
   };
 
-
-
   const renderUsers = user => {
-      const html = `
+    const html = `
       <div class="card">
             <div class="card-container">
               <div class="avatar-container">
