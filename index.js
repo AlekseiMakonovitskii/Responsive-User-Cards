@@ -4,10 +4,10 @@ const app = function () {
 
   const loadUsers = () => {
     return new Promise((resolve, reject) => {
-      const res = fetch(`https://random-data-api.com/api/v2/users`);
+      const api = fetch(`https://random-data-api.com/api/v2/users`);
 
-      if (res) {
-        resolve(res);
+      if (api) {
+        resolve(api);
       } else {
         reject(new Error(`Users not found`));
       }
